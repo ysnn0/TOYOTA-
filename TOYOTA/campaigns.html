@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toyota Kampanyalar | Özel Fırsatlar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HEADER & NAVBAR -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="navbar-logo">
+                    <a href="index.html">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Toyota.svg/2560px-Toyota.svg.png" alt="Toyota Logo">
+                    </a>
+                </div>
+
+                <ul class="navbar-menu">
+                    <li><a href="index.html" class="nav-link">Anasayfa</a></li>
+                    <li><a href="models.html" class="nav-link">Modeller</a></li>
+                    <li><a href="configurator.html" class="nav-link">Konfigüratör</a></li>
+                    <li><a href="campaigns.html" class="nav-link">Kampanyalar</a></li>
+                </ul>
+
+                <div class="navbar-actions" id="authButton">
+                    <button class="btn-cta" onclick="openModal('authModal')">
+                        Giriş Yap
+                    </button>
+                </div>
+
+                <button class="hamburger" id="hamburgerBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- MOBILE MENU -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-header">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Toyota.svg/2560px-Toyota.svg.png" alt="Toyota">
+                <button class="mobile-menu-close" id="mobileMenuClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <ul class="mobile-menu-list">
+                <li class="mobile-menu-item">
+                    <a href="index.html" class="mobile-menu-link">Anasayfa</a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="models.html" class="mobile-menu-link">Modeller</a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="configurator.html" class="mobile-menu-link">Konfigüratör</a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="campaigns.html" class="mobile-menu-link">Kampanyalar</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- CAMPAIGNS HERO -->
+    <section class="campaigns-hero">
+        <div class="container">
+            <h1>Güncel Kampanyalar</h1>
+            <p>Size özel fırsatlar ve avantajlı ödeme seçenekleri</p>
+        </div>
+    </section>
+
+    <!-- CAMPAIGNS GRID -->
+    <section class="campaigns-section">
+        <div class="campaigns-grid">
+            <!-- Campaign 1: Zero Interest -->
+            <div class="campaign-card">
+                <div class="campaign-badge">POPÜLER</div>
+                <div class="campaign-image">
+                    <i class="fas fa-percent campaign-icon"></i>
+                </div>
+                <div class="campaign-content">
+                    <h3 class="campaign-title">0 Faiz Fırsatı</h3>
+                    <p class="campaign-description">
+                        Tüm hibrit modellerimizde geçerli özel kredi kampanyası ile hayalinizdeki Toyota'ya sahip olmanın tam zamanı!
+                    </p>
+                    <div class="campaign-highlight">
+                        <strong>200.000 ₺'ye kadar</strong><br>
+                        12 ay %0 faiz avantajı
+                    </div>
+                    <p class="campaign-terms">*31 Aralık 2024'e kadar geçerlidir. Finans kuruluşuna göre değişiklik gösterebilir.</p>
+                    <button class="btn-campaign" onclick="showCampaignDetails('zero-interest')">
+                        <i class="fas fa-info-circle"></i>
+                        Detaylı Bilgi
+                    </button>
+                </div>
+            </div>
+
+            <!-- Campaign 2: Trade-In -->
+            <div class="campaign-card">
+                <div class="campaign-badge">YENİ</div>
+                <div class="campaign-image">
+                    <i class="fas fa-exchange-alt campaign-icon"></i>
+                </div>
+                <div class="campaign-content">
+                    <h3 class="campaign-title">Takas Desteği</h3>
+                    <p class="campaign-description">
+                        Eski aracınızı değerlendiriyoruz! Yeni Toyota C-HR modelinde özel takas avantajından yararlanın.
+                    </p>
+                    <div class="campaign-highlight">
+                        <strong>50.000 ₺'ye varan</strong><br>
+                        Takas desteği
+                    </div>
+                    <p class="campaign-terms">*Kampanya stoklarla sınırlıdır. Araç değerlendirmesi yetkili bayilerimizde yapılacaktır.</p>
+                    <button class="btn-campaign" onclick="showCampaignDetails('trade-in')">
+                        <i class="fas fa-info-circle"></i>
+                        Detaylı Bilgi
+                    </button>
+                </div>
+            </div>
+
+            <!-- Campaign 3: Service Days -->
+            <div class="campaign-card">
+                <div class="campaign-image">
+                    <i class="fas fa-tools campaign-icon"></i>
+                </div>
+                <div class="campaign-content">
+                    <h3 class="campaign-title">Kış Bakım Günleri</h3>
+                    <p class="campaign-description">
+                        Yetkili servislerimizde periyodik bakım yaptıranlara özel kış kampanyası ile aracınızı soğuk havalara hazırlayın.
+                    </p>
+                    <div class="campaign-highlight">
+                        <strong>%20 İndirim</strong><br>
+                        Silecek + Motor yağı
+                    </div>
+                    <p class="campaign-terms">*Tüm Toyota yetkili servislerinde geçerlidir. Randevu ile geliniz.</p>
+                    <button class="btn-campaign" onclick="openModal('serviceModal')">
+                        <i class="fas fa-calendar-check"></i>
+                        Randevu Al
+                    </button>
+                </div>
+            </div>
+
+            <!-- Campaign 4: Hybrid Bonus -->
+            <div class="campaign-card">
+                <div class="campaign-badge">ÖZEL</div>
+                <div class="campaign-image">
+                    <i class="fas fa-leaf campaign-icon"></i>
+                </div>
+                <div class="campaign-content">
+                    <h3 class="campaign-title">Hibrit Avantajı</h3>
+                    <p class="campaign-description">
+                        Toyota hibrit teknolojisine geçiş yapanlara özel finansman paketi ve ek donanım desteği.
+                    </p>
+                    <div class="campaign-highlight">
+                        <strong>Ücretsiz</strong><br>
+                        Premium ses sistemi
+                    </div>
+                    <p class="campaign-terms">*Yeni Corolla Hybrid ve C-HR modellerinde geçerlidir. Flame ve üzeri versiyonlar için.</p>
+                    <button class="btn-campaign" onclick="showCampaignDetails('hybrid-bonus')">
+                        <i class="fas fa-info-circle"></i>
+                        Detaylı Bilgi
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>TOYOTA</h3>
+                    <p>İmkansız diye bir şey yok. Geleceğin teknolojisi bugünden sizinle.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Hızlı Linkler</h4>
+                    <ul>
+                        <li><a href="models.html">Modeller</a></li>
+                        <li><a href="configurator.html">Konfigüratör</a></li>
+                        <li><a href="campaigns.html">Kampanyalar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Hizmetler</h4>
+                    <ul>
+                        <li><a href="#" onclick="openModal('serviceModal'); return false;">Servis Randevusu</a></li>
+                        <li><a href="warranty.html">Garanti</a></li>
+                        <li><a href="#">Yol Yardım</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Bizi Takip Edin</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/ToyotaTurkiye" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/toyota_turkiye/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/Toyota_Turkiye" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.youtube.com/user/ToyotaTurkiye" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Toyota Türkiye. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODALS -->
+    <!-- Authentication Modal -->
+    <div class="modal-overlay" id="authModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2 class="modal-title" id="authFormTitle">Hesabınıza Giriş Yapın</h2>
+                <button class="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="auth-tabs">
+                    <button class="auth-tab active" onclick="switchAuthTab('login')">Giriş Yap</button>
+                    <button class="auth-tab" onclick="switchAuthTab('register')">Kayıt Ol</button>
+                </div>
+                <form class="modal-form" onsubmit="submitAuthForm(event)">
+                    <input type="text" name="name" class="form-input" placeholder="Adınız Soyadınız" id="authNameField" style="display: none;">
+                    <input type="email" class="form-input" placeholder="E-posta Adresiniz" required>
+                    <input type="password" class="form-input" placeholder="Şifreniz" required>
+                    <button type="submit" class="btn-submit" id="authSubmitBtn">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Giriş Yap
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Service Appointment Modal -->
+    <div class="modal-overlay" id="serviceModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2 class="modal-title">Servis Randevusu</h2>
+                <button class="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="modal-form" onsubmit="submitServiceForm(event)">
+                    <input type="text" class="form-input" placeholder="Adınız Soyadınız" required>
+                    <input type="tel" class="form-input" placeholder="Telefon Numaranız" required>
+                    <input type="date" class="form-input" required>
+                    <select class="form-input" required>
+                        <option value="">Servis Tipi Seçin</option>
+                        <option value="periodic">Periyodik Bakım</option>
+                        <option value="repair">Tamir</option>
+                        <option value="tire">Lastik Değişimi</option>
+                        <option value="other">Diğer</option>
+                    </select>
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-calendar-check"></i>
+                        Randevu Oluştur
+                    </button>
+                </form>
+                <div class="success-message" style="display: none;">
+                    <div class="success-icon">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <h3>Talebiniz Alındı!</h3>
+                    <p>Servis ekibimiz en kısa sürede sizinle iletişime geçecektir.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Campaign Details Modal -->
+    <div class="modal-overlay" id="campaignModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2 class="modal-title" id="campaignModalTitle">Kampanya Detayları</h2>
+                <button class="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="campaignModalContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp FAB -->
+    <a href="https://wa.me/908501234567?text=Merhaba,%20Toyota%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" class="fab-whatsapp">
+        <span class="fab-tooltip">WhatsApp Destek</span>
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+    <script>
+        function showCampaignDetails(type) {
+            const modal = document.getElementById('campaignModal');
+            const title = document.getElementById('campaignModalTitle');
+            const content = document.getElementById('campaignModalContent');
+            
+            const details = {
+                'zero-interest': {
+                    title: '0 Faiz Kampanyası Detayları',
+                    content: `
+                        <h3 style="margin-bottom: 15px;">Kampanya Koşulları</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 10px 0; border-bottom: 1px solid #f0f0f0;">
+                                <i class="fas fa-check" style="color: #EB0A1E; margin-right: 10px;"></i>
+                                Tüm hibrit modellerde geçerlidir
+                            </li>
+                            <li style="padding: 10px 0; border-bottom: 1px solid #f0f0f0;">
+                                <i class="fas fa-check" style="color: #EB0A1E; margin-right: 10px;"></i>
+                                200.000 ₺'ye kadar 12 ay %0 faiz
+                            </li>
+                            <li style="padding: 10px 0; border-bottom: 1px solid #f0f0f0;">
+                                <i class="fas fa-check" style="color: #EB0A1E; margin-right: 10px;"></i>
+                                Minimum %20 peşinat gereklidir
+                            </li>
+                            <li style="padding: 10px 0;">
+                                <i class="fas fa-check" style="color: #EB0A1E; margin-right: 10px;"></i>
+                                31 Aralık 2024'e kadar geçerlidir
+                            </li>
+                        </ul>
+                        <button class="btn-primary btn-full" style="margin-top: 20px;" onclick="window.location.href='configurator.html'">
+                            Hemen Başvur
+                        </button>
+                    `
+                },
+                'trade-in': {
+                    title: 'Takas Desteği Detayları',
+                    content: `
+                        <h3 style="margin-bottom: 15px;">Kampanya Koşulları</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 10px 0; border-bottom: 1px solid #f0f0f0;">
+                                <i class="fas fa-check" style="color: #EB0A1E; margin-right: 10px;"></i>
+                                Toyota C-HR modelinde geçerlidir
+                            </li>
+                            <li style="padding: 10px 0; border-bottom: 1px solid #f0f0f0;">
+                                <i class="fas fa-check" style="color: #EB0A1E; margin-right: 10px;"></i>
+                                50.000 ₺'ye varan takas desteği
+                            </li>
+                            <li style="padding: 10px 0; border-bottom: 1px solid #f0f0f0;">
+                                <i class="fas fa-check" style="color: #EB0A1E; margin-right: 10px;"></i>
+                                Tüm marka ve modeller değerlendirilir
+                            </li>
+                            <li style="padding: 10px 0;">
+                                <i class="fas fa-check" style="color: #EB0A1E; margin-right: 10px;"></i>
+                                Stoklarla sınırlıdır
+                            </li>
+                        </ul>
+                        <button class="btn-primary btn-full" style="margin-top: 20px;" onclick="window.location.href='models.html'">
+                            Modelleri İncele
+                        </button>
+                    `
+                },
+                'hybrid-bonus': {
+                    title: 'Hibrit Avantajı Detayları',
+                    content: `
+                        <h3 style="margin-bottom: 15px;">Kampanya Koşulları</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 10px 0; border-bottom: 1px solid #f0f0f0;">
+                                <i class="fas fa-check" style="color: #EB0A1E; margin-right: 10px;"></i>
+                                Corolla Hybrid ve C-HR'de geçerli
+                            </li>
+                            <li style="padding: 10px 0; border-bottom: 1px solid #f0f0f0;">
+                                <i class="fas fa-check" style="color: #EB0A1E; margin-right: 10px;"></i>
+                                Premium ses sistemi hediye
+                            </li>
+                            <li style="padding: 10px 0; border-bottom: 1px solid #f0f0f0;">
+                                <i class="fas fa-check" style="color: #EB0A1E; margin-right: 10px;"></i>
+                                Flame ve üzeri versiyonlarda
+                            </li>
+                            <li style="padding: 10px 0;">
+                                <i class="fas fa-check" style="color: #EB0A1E; margin-right: 10px;"></i>
+                                Özel finansman seçenekleri
+                            </li>
+                        </ul>
+                        <button class="btn-primary btn-full" style="margin-top: 20px;" onclick="window.location.href='configurator.html'">
+                            Konfigüre Et
+                        </button>
+                    `
+                }
+            };
+            
+            if (details[type]) {
+                title.textContent = details[type].title;
+                content.innerHTML = details[type].content;
+                openModal('campaignModal');
+            }
+        }
+    </script>
+</body>
+</html>

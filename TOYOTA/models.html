@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toyota Modeller | Hibrit Araç Seçenekleri</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HEADER & NAVBAR -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="navbar-logo">
+                    <a href="index.html">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Toyota.svg/2560px-Toyota.svg.png" alt="Toyota Logo">
+                    </a>
+                </div>
+
+                <ul class="navbar-menu">
+                    <li><a href="index.html" class="nav-link">Anasayfa</a></li>
+                    <li><a href="models.html" class="nav-link">Modeller</a></li>
+                    <li><a href="configurator.html" class="nav-link">Konfigüratör</a></li>
+                </ul>
+
+                <div class="navbar-actions" id="authButton">
+                    <button class="btn-cta" onclick="openModal('authModal')">
+                        Giriş Yap
+                    </button>
+                </div>
+
+                <button class="hamburger" id="hamburgerBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- MOBILE MENU -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-header">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Toyota.svg/2560px-Toyota.svg.png" alt="Toyota">
+                <button class="mobile-menu-close" id="mobileMenuClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <ul class="mobile-menu-list">
+                <li class="mobile-menu-item">
+                    <a href="index.html" class="mobile-menu-link">Anasayfa</a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="models.html" class="mobile-menu-link">Modeller</a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="configurator.html" class="mobile-menu-link">Konfigüratör</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Toyota Modeller</h1>
+            <p class="page-subtitle">Hibrit teknolojisi ile geleceği bugünden yaşayın</p>
+        </div>
+    </section>
+
+    <!-- MODELS GRID -->
+    <section class="models-section">
+        <div class="models-grid">
+            <!-- Model 1: Corolla Hybrid -->
+            <div class="model-card">
+                <div class="model-badge">EN ÇOK SATAN</div>
+                <div class="model-image">
+                    <img src="corolla hibrit.webp" alt="Toyota Corolla Hybrid">
+                </div>
+                <div class="model-info">
+                    <h3 class="model-name">Corolla Hybrid</h3>
+                    <p class="model-type">Sedan | 1.8L Hibrit</p>
+                    <span class="model-price">1.200.000 ₺'den başlayan fiyatlarla</span>
+                    <div class="model-specs">
+                        <span><i class="fas fa-gas-pump"></i> 4.5 L/100km</span>
+                        <span><i class="fas fa-users"></i> 5 Kişilik</span>
+                        <span><i class="fas fa-leaf"></i> Hibrit</span>
+                    </div>
+                    <button class="btn-configure" onclick="configureModel('corolla', 'Corolla Hybrid', 1200000)">
+                        Konfigüre Et <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Model 2: C-HR -->
+            <div class="model-card">
+                <div class="model-badge">YENİ</div>
+                <div class="model-image">
+                    <img src="chr.webp" alt="Toyota C-HR">
+                </div>
+                <div class="model-info">
+                    <h3 class="model-name">Toyota C-HR</h3>
+                    <p class="model-type">SUV | 1.8L Tam Hibrit</p>
+                    <span class="model-price">1.550.000 ₺'den başlayan fiyatlarla</span>
+                    <div class="model-specs">
+                        <span><i class="fas fa-bolt"></i> 184 HP</span>
+                        <span><i class="fas fa-car"></i> SUV</span>
+                        <span><i class="fas fa-shield-alt"></i> TSS 3.0</span>
+                    </div>
+                    <button class="btn-configure" onclick="configureModel('chr', 'Toyota C-HR', 1550000)">
+                        Konfigüre Et <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Model 3: Yaris Cross -->
+            <div class="model-card">
+                <div class="model-image">
+                    <img src="yaris.webp" alt="Toyota Yaris Cross">
+                </div>
+                <div class="model-info">
+                    <h3 class="model-name">Yaris Cross</h3>
+                    <p class="model-type">Kompakt SUV | 1.5L Hibrit</p>
+                    <span class="model-price">1.100.000 ₺'den başlayan fiyatlarla</span>
+                    <div class="model-specs">
+                        <span><i class="fas fa-leaf"></i> Ekonomik</span>
+                        <span><i class="fas fa-city"></i> Şehir İçi</span>
+                        <span><i class="fas fa-tools"></i> 3 Yıl Garanti</span>
+                    </div>
+                    <button class="btn-configure" onclick="configureModel('yaris', 'Yaris Cross', 1100000)">
+                        Konfigüre Et <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Model 4: RAV4 Hybrid -->
+            <div class="model-card">
+                <div class="model-image">
+                    <img src="rav4.jpg" alt="Toyota RAV4 Hybrid">
+                </div>
+                <div class="model-info">
+                    <h3 class="model-name">RAV4 Hybrid</h3>
+                    <p class="model-type">SUV | 2.5L Hibrit AWD</p>
+                    <span class="model-price">1.850.000 ₺'den başlayan fiyatlarla</span>
+                    <div class="model-specs">
+                        <span><i class="fas fa-tachometer-alt"></i> 218 HP</span>
+                        <span><i class="fas fa-mountain"></i> AWD</span>
+                        <span><i class="fas fa-road"></i> Off-Road</span>
+                    </div>
+                    <button class="btn-configure" onclick="configureModel('rav4', 'RAV4 Hybrid', 1850000)">
+                        Konfigüre Et <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Model 5: Camry Hybrid -->
+            <div class="model-card">
+                <div class="model-image">
+                    <img src="camry.jpg" alt="Toyota Camry Hybrid">
+                </div>
+                <div class="model-info">
+                    <h3 class="model-name">Camry Hybrid</h3>
+                    <p class="model-type">Sedan Premium | 2.5L Hibrit</p>
+                    <span class="model-price">2.100.000 ₺'den başlayan fiyatlarla</span>
+                    <div class="model-specs">
+                        <span><i class="fas fa-trophy"></i> Premium</span>
+                        <span><i class="fas fa-couch"></i> Lüks İç Mekan</span>
+                        <span><i class="fas fa-bolt"></i> 218 HP</span>
+                    </div>
+                    <button class="btn-configure" onclick="configureModel('camry', 'Camry Hybrid', 2100000)">
+                        Konfigüre Et <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Model 6: Hilux -->
+            <div class="model-card">
+                <div class="model-image">
+                    <img src="hilux.webp" alt="Toyota Hilux">
+                </div>
+                <div class="model-info">
+                    <h3 class="model-name">Hilux</h3>
+                    <p class="model-type">Pick-Up | 2.4L Dizel</p>
+                    <span class="model-price">1.650.000 ₺'den başlayan fiyatlarla</span>
+                    <div class="model-specs">
+                        <span><i class="fas fa-truck"></i> Pick-Up</span>
+                        <span><i class="fas fa-weight-hanging"></i> 1 Ton Yük</span>
+                        <span><i class="fas fa-cogs"></i> 4x4</span>
+                    </div>
+                    <button class="btn-configure" onclick="configureModel('hilux', 'Hilux', 1650000)">
+                        Konfigüre Et <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>TOYOTA</h3>
+                    <p>İmkansız diye bir şey yok. Geleceğin teknolojisi bugünden sizinle.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Hızlı Linkler</h4>
+                    <ul>
+                        <li><a href="models.html">Modeller</a></li>
+                        <li><a href="configurator.html">Konfigüratör</a></li>
+                        <li><a href="#">Kampanyalar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Hizmetler</h4>
+                    <ul>
+                        <li><a href="#" onclick="openModal('serviceModal'); return false;">Servis Randevusu</a></li>
+                        <li><a href="#">Garanti</a></li>
+                        <li><a href="#">Yol Yardım</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Bizi Takip Edin</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/ToyotaTurkiye" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/toyota_turkiye/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/Toyota_Turkiye" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.youtube.com/user/ToyotaTurkiye" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Toyota Türkiye. Tüm hakları saklıdır. Eğitim projesidir.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODALS -->
+    <!-- Authentication Modal -->
+    <div class="modal-overlay" id="authModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2 class="modal-title" id="authFormTitle">Hesabınıza Giriş Yapın</h2>
+                <button class="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="auth-tabs">
+                    <button class="auth-tab active" onclick="switchAuthTab('login')">Giriş Yap</button>
+                    <button class="auth-tab" onclick="switchAuthTab('register')">Kayıt Ol</button>
+                </div>
+                <form class="modal-form" onsubmit="submitAuthForm(event)">
+                    <input type="text" name="name" class="form-input" placeholder="Adınız Soyadınız" id="authNameField" style="display: none;">
+                    <input type="email" class="form-input" placeholder="E-posta Adresiniz" required>
+                    <input type="password" class="form-input" placeholder="Şifreniz" required>
+                    <button type="submit" class="btn-submit" id="authSubmitBtn">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Giriş Yap
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Service Appointment Modal -->
+    <div class="modal-overlay" id="serviceModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2 class="modal-title">Servis Randevusu</h2>
+                <button class="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="modal-form" onsubmit="submitServiceForm(event)">
+                    <input type="text" class="form-input" placeholder="Adınız Soyadınız" required>
+                    <input type="tel" class="form-input" placeholder="Telefon Numaranız" required>
+                    <input type="date" class="form-input" required>
+                    <select class="form-input" required>
+                        <option value="">Servis Tipi Seçin</option>
+                        <option value="periodic">Periyodik Bakım</option>
+                        <option value="repair">Tamir</option>
+                        <option value="tire">Lastik Değişimi</option>
+                        <option value="other">Diğer</option>
+                    </select>
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-calendar-check"></i>
+                        Randevu Oluştur
+                    </button>
+                </form>
+                <div class="success-message" style="display: none;">
+                    <div class="success-icon">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <h3>Talebiniz Alındı!</h3>
+                    <p>Servis ekibimiz en kısa sürede sizinle iletişime geçecektir.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp FAB -->
+    <a href="https://wa.me/908501234567?text=Merhaba,%20Toyota%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" class="fab-whatsapp">
+        <span class="fab-tooltip">WhatsApp Destek</span>
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- TOAST NOTIFICATION CONTAINER -->
+    <div class="toast-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

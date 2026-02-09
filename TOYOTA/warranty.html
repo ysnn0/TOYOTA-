@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toyota Garanti | 10 Yıl Güvence</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HEADER & NAVBAR -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="navbar-logo">
+                    <a href="index.html">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Toyota.svg/2560px-Toyota.svg.png" alt="Toyota Logo">
+                    </a>
+                </div>
+
+                <ul class="navbar-menu">
+                    <li><a href="index.html" class="nav-link">Anasayfa</a></li>
+                    <li><a href="models.html" class="nav-link">Modeller</a></li>
+                    <li><a href="configurator.html" class="nav-link">Konfigüratör</a></li>
+                    <li><a href="campaigns.html" class="nav-link">Kampanyalar</a></li>
+                </ul>
+
+                <div class="navbar-actions" id="authButton">
+                    <button class="btn-cta" onclick="openModal('authModal')">
+                        Giriş Yap
+                    </button>
+                </div>
+
+                <button class="hamburger" id="hamburgerBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- MOBILE MENU -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-header">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Toyota.svg/2560px-Toyota.svg.png" alt="Toyota">
+                <button class="mobile-menu-close" id="mobileMenuClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <ul class="mobile-menu-list">
+                <li class="mobile-menu-item">
+                    <a href="index.html" class="mobile-menu-link">Anasayfa</a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="models.html" class="mobile-menu-link">Modeller</a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="configurator.html" class="mobile-menu-link">Konfigüratör</a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="campaigns.html" class="mobile-menu-link">Kampanyalar</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- WARRANTY HERO -->
+    <section class="warranty-hero">
+        <div class="container">
+            <h1>Toyota Garanti Güvencesi</h1>
+            <p>10 yıla kadar güvence ile huzurlu sürüş deneyimi</p>
+        </div>
+    </section>
+
+    <!-- WARRANTY FEATURES -->
+    <section class="warranty-section">
+        <div class="warranty-grid">
+            <div class="warranty-card">
+                <div class="warranty-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>10 Yıl Garanti</h3>
+                <p>Hibrit bataryalarımız için 10 yıl veya 240.000 km garanti kapsamında tam güvence sağlıyoruz.</p>
+            </div>
+
+            <div class="warranty-card">
+                <div class="warranty-icon">
+                    <i class="fas fa-car-battery"></i>
+                </div>
+                <h3>Hibrit Batarya</h3>
+                <p>Hibrit batarya sistemimiz, üstün performansı ve uzun ömrüyle endüstride öncü konumdadır.</p>
+            </div>
+
+            <div class="warranty-card">
+                <div class="warranty-icon">
+                    <i class="fas fa-road"></i>
+                </div>
+                <h3>Yol Yardım</h3>
+                <p>7/24 yol yardım hizmeti ile her an yanınızdayız. Türkiye'nin her yerinde destek.</p>
+            </div>
+        </div>
+
+        <!-- ACCORDION FAQ -->
+        <div class="accordion-section">
+            <h2 class="accordion-title">Sıkça Sorulan Sorular</h2>
+
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <h4>Hibrit batarya garantisi nasıl çalışır?</h4>
+                    <i class="fas fa-chevron-down accordion-icon"></i>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <p>Toyota hibrit batarya garantisi, aracınızı satın aldığınız tarihten itibaren 10 yıl veya 240.000 km (hangisi önce dolarsa) boyunca geçerlidir. Bu garanti kapsamında, hibrit batarya sisteminde meydana gelebilecek üretim hatalarından kaynaklanan arızalar ücretsiz olarak onarılır veya değiştirilir.</p>
+                        <p style="margin-top: 10px;"><strong>Garanti kapsamına dahil olanlar:</strong></p>
+                        <ul style="margin-top: 10px; list-style: disc; padding-left: 20px;">
+                            <li>Hibrit batarya modülü</li>
+                            <li>Batarya kontrol ünitesi</li>
+                            <li>Güç kontrol ünitesi</li>
+                            <li>İnvertör ve şarj sistemi</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <h4>Periyodik bakımlar garantiyi etkiler mi?</h4>
+                    <i class="fas fa-chevron-down accordion-icon"></i>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <p>Evet, garantinizin geçerliliğini korumak için periyodik bakımlarınızın Toyota yetkili servislerinde yaptırılması gerekmektedir. Her bakımda, uzman teknisyenlerimiz aracınızı Toyota standartlarına göre kontrol eder ve gerekli işlemleri gerçekleştirir.</p>
+                        <p style="margin-top: 10px;"><strong>Önerilen bakım aralıkları:</strong></p>
+                        <ul style="margin-top: 10px; list-style: disc; padding-left: 20px;">
+                            <li>İlk bakım: 15.000 km veya 12 ay</li>
+                            <li>Sonraki bakımlar: Her 15.000 km'de bir</li>
+                            <li>Özel kontroller: Yılda bir kez</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <h4>Yol yardım hizmeti neleri kapsar?</h4>
+                    <i class="fas fa-chevron-down accordion-icon"></i>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <p>Toyota Yol Yardım hizmeti, 7 gün 24 saat Türkiye'nin her yerinde sizlere destek sağlar. Garantili tüm Toyota araçlarda standart olarak sunulan bu hizmet, beklenmedik durumlarda yanınızda olur.</p>
+                        <p style="margin-top: 10px;"><strong>Hizmetlerimiz:</strong></p>
+                        <ul style="margin-top: 10px; list-style: disc; padding-left: 20px;">
+                            <li>Çekici hizmeti (en yakın yetkili servise kadar)</li>
+                            <li>Akü takviye hizmeti</li>
+                            <li>Lastik değişimi desteği</li>
+                            <li>Kilit açma hizmeti</li>
+                            <li>Yakıt ikmali desteği</li>
+                        </ul>
+                        <p style="margin-top: 15px; background: #fff5f5; padding: 15px; border-radius: 8px;">
+                            <i class="fas fa-phone" style="color: #EB0A1E; margin-right: 10px;"></i>
+                            <strong>Yol Yardım Hattı:</strong> 0850 123 45 67
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <h4>Garantiyi uzatabilir miyim?</h4>
+                    <i class="fas fa-chevron-down accordion-icon"></i>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <p>Evet! Toyota Plus Garanti programı ile standart garantinizi istediğiniz süre kadar uzatabilirsiniz. Bu program, standart garanti süreniz dolmadan satın alınabilir ve aracınıza ek koruma sağlar.</p>
+                        <p style="margin-top: 10px;"><strong>Garanti uzatma seçenekleri:</strong></p>
+                        <ul style="margin-top: 10px; list-style: disc; padding-left: 20px;">
+                            <li>1 yıl / 20.000 km ek garanti</li>
+                            <li>2 yıl / 40.000 km ek garanti</li>
+                            <li>3 yıl / 60.000 km ek garanti</li>
+                        </ul>
+                        <button class="btn-primary" style="margin-top: 20px;" onclick="openModal('serviceModal')">
+                            Detaylı Bilgi Al
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <h4>Garanti transferi mümkün mü?</h4>
+                    <i class="fas fa-chevron-down accordion-icon"></i>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <p>Evet, aracınızı satmanız durumunda kalan garanti süresi yeni sahibine otomatik olarak transfer edilir. Bu özellik, Toyota'nızın ikinci el değerini önemli ölçüde artırır.</p>
+                        <p style="margin-top: 10px;"><strong>Transfer işlemi için gerekenler:</strong></p>
+                        <ul style="margin-top: 10px; list-style: disc; padding-left: 20px;">
+                            <li>Tüm periyodik bakımların belgelenmiş olması</li>
+                            <li>Araç satış belgelerinin tamamlanması</li>
+                            <li>Garanti transfer formunun doldurulması</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- INFO BOX -->
+        <div class="container" style="max-width: 1200px; padding: 0 20px;">
+            <div class="info-box">
+                <h3><i class="fas fa-info-circle"></i> Önemli Bilgiler</h3>
+                <p>Toyota garanti programı, size gönül rahatlığı ve güvenli bir sürüş deneyimi sunmak için tasarlanmıştır. Garantinizin tüm koşullarını detaylı olarak incelemek için yetkili bayilerimizle iletişime geçebilirsiniz.</p>
+                <ul>
+                    <li>
+                        <i class="fas fa-check"></i>
+                        Tüm işlemler orijinal Toyota parçaları ile yapılır
+                    </li>
+                    <li>
+                        <i class="fas fa-check"></i>
+                        Uzman teknisyenler tarafından servis hizmeti
+                    </li>
+                    <li>
+                        <i class="fas fa-check"></i>
+                        Garanti kapsamı Türkiye genelinde geçerlidir
+                    </li>
+                    <li>
+                        <i class="fas fa-check"></i>
+                        Dijital servis geçmişi takibi
+                    </li>
+                </ul>
+                <div style="display: flex; gap: 15px; margin-top: 25px;">
+                    <button class="btn-primary" onclick="openModal('serviceModal')">
+                        <i class="fas fa-calendar-check"></i>
+                        Servis Randevusu Al
+                    </button>
+                    <button class="btn-primary" style="background: var(--dark-gray);" onclick="window.location.href='models.html'">
+                        <i class="fas fa-car"></i>
+                        Modelleri İncele
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>TOYOTA</h3>
+                    <p>İmkansız diye bir şey yok. Geleceğin teknolojisi bugünden sizinle.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Hızlı Linkler</h4>
+                    <ul>
+                        <li><a href="models.html">Modeller</a></li>
+                        <li><a href="configurator.html">Konfigüratör</a></li>
+                        <li><a href="campaigns.html">Kampanyalar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Hizmetler</h4>
+                    <ul>
+                        <li><a href="#" onclick="openModal('serviceModal'); return false;">Servis Randevusu</a></li>
+                        <li><a href="warranty.html">Garanti</a></li>
+                        <li><a href="#">Yol Yardım</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Bizi Takip Edin</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/ToyotaTurkiye" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/toyota_turkiye/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/Toyota_Turkiye" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.youtube.com/user/ToyotaTurkiye" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Toyota Türkiye. Tüm hakları saklıdır. Eğitim projesidir.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODALS -->
+    <!-- Authentication Modal -->
+    <div class="modal-overlay" id="authModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2 class="modal-title" id="authFormTitle">Hesabınıza Giriş Yapın</h2>
+                <button class="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="auth-tabs">
+                    <button class="auth-tab active" onclick="switchAuthTab('login')">Giriş Yap</button>
+                    <button class="auth-tab" onclick="switchAuthTab('register')">Kayıt Ol</button>
+                </div>
+                <form class="modal-form" onsubmit="submitAuthForm(event)">
+                    <input type="text" name="name" class="form-input" placeholder="Adınız Soyadınız" id="authNameField" style="display: none;">
+                    <input type="email" class="form-input" placeholder="E-posta Adresiniz" required>
+                    <input type="password" class="form-input" placeholder="Şifreniz" required>
+                    <button type="submit" class="btn-submit" id="authSubmitBtn">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Giriş Yap
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Service Appointment Modal -->
+    <div class="modal-overlay" id="serviceModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2 class="modal-title">Servis Randevusu</h2>
+                <button class="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="modal-form" onsubmit="submitServiceForm(event)">
+                    <input type="text" class="form-input" placeholder="Adınız Soyadınız" required>
+                    <input type="tel" class="form-input" placeholder="Telefon Numaranız" required>
+                    <input type="date" class="form-input" required>
+                    <select class="form-input" required>
+                        <option value="">Servis Tipi Seçin</option>
+                        <option value="periodic">Periyodik Bakım</option>
+                        <option value="repair">Tamir</option>
+                        <option value="tire">Lastik Değişimi</option>
+                        <option value="other">Diğer</option>
+                    </select>
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-calendar-check"></i>
+                        Randevu Oluştur
+                    </button>
+                </form>
+                <div class="success-message" style="display: none;">
+                    <div class="success-icon">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <h3>Talebiniz Alındı!</h3>
+                    <p>Servis ekibimiz en kısa sürede sizinle iletişime geçecektir.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp FAB -->
+    <a href="https://wa.me/908501234567?text=Merhaba,%20Toyota%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" class="fab-whatsapp">
+        <span class="fab-tooltip">WhatsApp Destek</span>
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- TOAST NOTIFICATION CONTAINER -->
+    <div class="toast-container"></div>
+
+    <script src="script.js"></script>
+    <script>
+        function toggleAccordion(element) {
+            const accordionItem = element.parentElement;
+            const isActive = accordionItem.classList.contains('active');
+            
+            // Close all accordion items
+            document.querySelectorAll('.accordion-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Open clicked item if it wasn't active
+            if (!isActive) {
+                accordionItem.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>

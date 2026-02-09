@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toyota Konfigüratör | Aracınızı Özelleştirin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HEADER & NAVBAR -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="navbar-logo">
+                    <a href="index.html">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Toyota.svg/2560px-Toyota.svg.png" alt="Toyota Logo">
+                    </a>
+                </div>
+
+                <ul class="navbar-menu">
+                    <li><a href="index.html" class="nav-link">Anasayfa</a></li>
+                    <li><a href="models.html" class="nav-link">Modeller</a></li>
+                    <li><a href="configurator.html" class="nav-link">Konfigüratör</a></li>
+                </ul>
+
+                <div class="navbar-actions" id="authButton">
+                    <button class="btn-cta" onclick="openModal('authModal')">
+                        Giriş Yap
+                    </button>
+                </div>
+
+                <button class="hamburger" id="hamburgerBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- MOBILE MENU -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-header">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Toyota.svg/2560px-Toyota.svg.png" alt="Toyota">
+                <button class="mobile-menu-close" id="mobileMenuClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <ul class="mobile-menu-list">
+                <li class="mobile-menu-item">
+                    <a href="index.html" class="mobile-menu-link">Anasayfa</a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="models.html" class="mobile-menu-link">Modeller</a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="configurator.html" class="mobile-menu-link">Konfigüratör</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- CONFIGURATOR SECTION -->
+    <section class="configurator-section">
+        <div class="configurator-container">
+            <!-- LEFT SIDE: MAIN FORM -->
+            <div class="configurator-main">
+                <h1 class="config-title">Aracınızı Konfigüre Edin</h1>
+                <p class="config-subtitle">Size özel Toyota'nızı oluşturun</p>
+
+                <!-- MODEL SELECTION -->
+                <div class="config-section">
+                    <h2 class="section-title">
+                        <i class="fas fa-car"></i>
+                        Model Seçimi
+                    </h2>
+                    <div class="form-group">
+                        <label class="form-label">Model</label>
+                        <select class="form-select" id="modelSelect">
+                            <option value="corolla" data-price="1200000">Corolla Hybrid - 1.200.000 ₺</option>
+                            <option value="chr" data-price="1550000">Toyota C-HR - 1.550.000 ₺</option>
+                            <option value="yaris" data-price="1100000">Yaris Cross - 1.100.000 ₺</option>
+                            <option value="rav4" data-price="1850000">RAV4 Hybrid - 1.850.000 ₺</option>
+                            <option value="camry" data-price="2100000">Camry Hybrid - 2.100.000 ₺</option>
+                            <option value="hilux" data-price="1650000">Hilux - 1.650.000 ₺</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- COLOR SELECTION -->
+                <div class="config-section">
+                    <h2 class="section-title">
+                        <i class="fas fa-palette"></i>
+                        Renk Seçimi
+                    </h2>
+                    <div class="color-options">
+                        <div class="color-option active" data-price="0">
+                            <div class="color-circle" style="background: #F8F8F8;"></div>
+                            <div class="color-name">Kar Beyazı</div>
+                            <div class="color-price">Standart</div>
+                        </div>
+                        <div class="color-option" data-price="15000">
+                            <div class="color-circle" style="background: #1C1C1C;"></div>
+                            <div class="color-name">Gece Siyahı</div>
+                            <div class="color-price">+15.000 ₺</div>
+                        </div>
+                        <div class="color-option" data-price="15000">
+                            <div class="color-circle" style="background: #AEB5BA;"></div>
+                            <div class="color-name">Gümüş Gri</div>
+                            <div class="color-price">+15.000 ₺</div>
+                        </div>
+                        <div class="color-option" data-price="20000">
+                            <div class="color-circle" style="background: #EB0A1E;"></div>
+                            <div class="color-name">Ateş Kırmızısı</div>
+                            <div class="color-price">+20.000 ₺</div>
+                        </div>
+                        <div class="color-option" data-price="15000">
+                            <div class="color-circle" style="background: #003DA5;"></div>
+                            <div class="color-name">Okyanus Mavisi</div>
+                            <div class="color-price">+15.000 ₺</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WHEEL SELECTION -->
+                <div class="config-section">
+                    <h2 class="section-title">
+                        <i class="fas fa-circle-notch"></i>
+                        Jant Seçimi
+                    </h2>
+                    <div class="wheel-options">
+                        <div class="wheel-option active" data-price="0">
+                            <i class="fas fa-circle" style="font-size: 3rem; color: #999; margin-bottom: 10px;"></i>
+                            <div class="wheel-name">16" Çelik Jantlar</div>
+                            <div class="wheel-price">Standart</div>
+                        </div>
+                        <div class="wheel-option" data-price="25000">
+                            <i class="fas fa-circle" style="font-size: 3rem; color: #666; margin-bottom: 10px;"></i>
+                            <div class="wheel-name">17" Alaşım Jantlar</div>
+                            <div class="wheel-price">+25.000 ₺</div>
+                        </div>
+                        <div class="wheel-option" data-price="40000">
+                            <i class="fas fa-circle" style="font-size: 3rem; color: #333; margin-bottom: 10px;"></i>
+                            <div class="wheel-name">18" Sport Jantlar</div>
+                            <div class="wheel-price">+40.000 ₺</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT SIDE: PRICE SIDEBAR -->
+            <div class="price-sidebar">
+                <div class="price-sidebar-sticky">
+                    <h3 class="sidebar-title">Fiyat Özeti</h3>
+                    
+                    <div class="price-breakdown">
+                        <div class="price-item">
+                            <span>Temel Fiyat</span>
+                            <span id="basePrice">1.200.000 ₺</span>
+                        </div>
+                        <div class="price-item">
+                            <span>Renk</span>
+                            <span id="colorPrice">0 ₺</span>
+                        </div>
+                        <div class="price-item">
+                            <span>Jantlar</span>
+                            <span id="wheelPrice">0 ₺</span>
+                        </div>
+                        <div class="price-divider"></div>
+                        <div class="price-total">
+                            <span>Toplam Fiyat</span>
+                            <span id="totalPrice">1.200.000 ₺</span>
+                        </div>
+                    </div>
+
+                    <!-- LOAN CALCULATOR -->
+                    <div class="loan-calculator">
+                        <h4 class="calculator-title">Kredi Hesaplayıcı</h4>
+                        
+                        <div class="calculator-input">
+                            <label class="calculator-label">Peşinat Miktarı</label>
+                            <input type="range" class="slider" id="downPaymentSlider" min="0" max="100" value="20" step="5">
+                            <div class="slider-labels">
+                                <span id="downPaymentAmount">240.000 ₺</span>
+                                <span id="downPaymentPercent">20%</span>
+                            </div>
+                        </div>
+
+                        <div class="calculator-input">
+                            <label class="calculator-label">Vade (Ay)</label>
+                            <input type="range" class="slider" id="monthsSlider" min="12" max="60" step="12" value="36">
+                            <div class="slider-labels">
+                                <span id="monthsValue">36 ay</span>
+                            </div>
+                        </div>
+
+                        <div class="loan-result">
+                            <div class="loan-label">Aylık Ödeme</div>
+                            <div class="loan-amount" id="monthlyPayment">28.000 ₺</div>
+                            <div class="loan-info">%2.99 faiz oranı ile</div>
+                        </div>
+                    </div>
+
+                    <button class="btn-primary btn-full" onclick="submitConfiguration()">
+                        <i class="fas fa-paper-plane"></i> Teklif İste
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>TOYOTA</h3>
+                    <p>İmkansız diye bir şey yok. Geleceğin teknolojisi bugünden sizinle.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Hızlı Linkler</h4>
+                    <ul>
+                        <li><a href="models.html">Modeller</a></li>
+                        <li><a href="configurator.html">Konfigüratör</a></li>
+                        <li><a href="#">Kampanyalar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Hizmetler</h4>
+                    <ul>
+                        <li><a href="#" onclick="openModal('serviceModal'); return false;">Servis Randevusu</a></li>
+                        <li><a href="#">Garanti</a></li>
+                        <li><a href="#">Yol Yardım</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Bizi Takip Edin</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/ToyotaTurkiye" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/toyota_turkiye/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/Toyota_Turkiye" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.youtube.com/user/ToyotaTurkiye" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Toyota Türkiye. Tüm hakları saklıdır. Eğitim projesidir.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODALS -->
+    <!-- Authentication Modal -->
+    <div class="modal-overlay" id="authModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2 class="modal-title" id="authFormTitle">Hesabınıza Giriş Yapın</h2>
+                <button class="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="auth-tabs">
+                    <button class="auth-tab active" onclick="switchAuthTab('login')">Giriş Yap</button>
+                    <button class="auth-tab" onclick="switchAuthTab('register')">Kayıt Ol</button>
+                </div>
+                <form class="modal-form" onsubmit="submitAuthForm(event)">
+                    <input type="text" name="name" class="form-input" placeholder="Adınız Soyadınız" id="authNameField" style="display: none;">
+                    <input type="email" class="form-input" placeholder="E-posta Adresiniz" required>
+                    <input type="password" class="form-input" placeholder="Şifreniz" required>
+                    <button type="submit" class="btn-submit" id="authSubmitBtn">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Giriş Yap
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Service Appointment Modal -->
+    <div class="modal-overlay" id="serviceModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2 class="modal-title">Servis Randevusu</h2>
+                <button class="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="modal-form" onsubmit="submitServiceForm(event)">
+                    <input type="text" class="form-input" placeholder="Adınız Soyadınız" required>
+                    <input type="tel" class="form-input" placeholder="Telefon Numaranız" required>
+                    <input type="date" class="form-input" required>
+                    <select class="form-input" required>
+                        <option value="">Servis Tipi Seçin</option>
+                        <option value="periodic">Periyodik Bakım</option>
+                        <option value="repair">Tamir</option>
+                        <option value="tire">Lastik Değişimi</option>
+                        <option value="other">Diğer</option>
+                    </select>
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-calendar-check"></i>
+                        Randevu Oluştur
+                    </button>
+                </form>
+                <div class="success-message" style="display: none;">
+                    <div class="success-icon">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <h3>Talebiniz Alındı!</h3>
+                    <p>Servis ekibimiz en kısa sürede sizinle iletişime geçecektir.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp FAB -->
+    <a href="https://wa.me/908501234567?text=Merhaba,%20Toyota%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" class="fab-whatsapp">
+        <span class="fab-tooltip">WhatsApp Destek</span>
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

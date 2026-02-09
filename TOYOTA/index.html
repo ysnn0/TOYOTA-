@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toyota Türkiye | Geleceği Sür</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HEADER & NAVBAR -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="navbar-logo">
+                    <a href="index.html">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Toyota.svg/2560px-Toyota.svg.png" alt="Toyota Logo">
+                    </a>
+                </div>
+
+                <ul class="navbar-menu">
+                    <li><a href="index.html" class="nav-link">Anasayfa</a></li>
+                    <li><a href="models.html" class="nav-link">Modeller</a></li>
+                    <li><a href="configurator.html" class="nav-link">Konfigüratör</a></li>
+                    <li><a href="campaigns.html" class="nav-link">Kampanyalar</a></li>
+                </ul>
+
+                <div class="navbar-actions" id="authButton">
+                    <button class="btn-cta" onclick="openModal('authModal')">
+                        Giriş Yap
+                    </button>
+                </div>
+
+                <button class="hamburger" id="hamburgerBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- MOBILE MENU -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-header">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Toyota.svg/2560px-Toyota.svg.png" alt="Toyota">
+                <button class="mobile-menu-close" id="mobileMenuClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <ul class="mobile-menu-list">
+                <li class="mobile-menu-item">
+                    <a href="index.html" class="mobile-menu-link">Anasayfa</a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="models.html" class="mobile-menu-link">Modeller</a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="configurator.html" class="mobile-menu-link">Konfigüratör</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-video">
+            <div class="hero-video-overlay"></div>
+            <video autoplay muted loop playsinline class="hero-video-element">
+                <source src="Yeni Toyota C-HR - Trim.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="hero-content">
+            <span class="hero-badge">YENİ NESİL HİBRİT</span>
+            <h1 class="hero-title">YENİ TOYOTA C-HR</h1>
+            <p class="hero-description">Sıradışı tasarım, kusursuz performans. Şehrin ritmini değiştirin.</p>
+            <div class="hero-buttons">
+                <a href="models.html" class="btn-primary">Modelleri İncele</a>
+                <a href="#" onclick="openModal('testDriveModal'); return false;" class="btn-outline">Test Sürüşü</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODALS -->
+    <!-- Authentication Modal -->
+    <div class="modal-overlay" id="authModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2 class="modal-title" id="authFormTitle">Hesabınıza Giriş Yapın</h2>
+                <button class="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="auth-tabs">
+                    <button class="auth-tab active" onclick="switchAuthTab('login')">Giriş Yap</button>
+                    <button class="auth-tab" onclick="switchAuthTab('register')">Kayıt Ol</button>
+                </div>
+                <form class="modal-form" onsubmit="submitAuthForm(event)">
+                    <input type="text" name="name" class="form-input" placeholder="Adınız Soyadınız" id="authNameField" style="display: none;">
+                    <input type="email" class="form-input" placeholder="E-posta Adresiniz" required>
+                    <input type="password" class="form-input" placeholder="Şifreniz" required>
+                    <button type="submit" class="btn-submit" id="authSubmitBtn">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Giriş Yap
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Service Appointment Modal -->
+    <div class="modal-overlay" id="serviceModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2 class="modal-title">Servis Randevusu</h2>
+                <button class="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="modal-form" onsubmit="submitServiceForm(event)">
+                    <input type="text" class="form-input" placeholder="Adınız Soyadınız" required>
+                    <input type="tel" class="form-input" placeholder="Telefon Numaranız" required>
+                    <input type="date" class="form-input" required>
+                    <select class="form-input" required>
+                        <option value="">Servis Tipi Seçin</option>
+                        <option value="periodic">Periyodik Bakım</option>
+                        <option value="repair">Tamir</option>
+                        <option value="tire">Lastik Değişimi</option>
+                        <option value="other">Diğer</option>
+                    </select>
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-calendar-check"></i>
+                        Randevu Oluştur
+                    </button>
+                </form>
+                <div class="success-message" style="display: none;">
+                    <div class="success-icon">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <h3>Talebiniz Alındı!</h3>
+                    <p>Servis ekibimiz en kısa sürede sizinle iletişime geçecektir.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Test Drive Modal -->
+    <div class="modal-overlay" id="testDriveModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2 class="modal-title">Test Sürüşü Randevusu</h2>
+                <button class="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="modal-form" onsubmit="submitTestDriveForm(event)">
+                    <input type="text" class="form-input" placeholder="Adınız Soyadınız" required>
+                    <input type="tel" class="form-input" placeholder="Telefon Numaranız" required>
+                    <input type="email" class="form-input" placeholder="E-posta Adresiniz" required>
+                    <select class="form-input" required>
+                        <option value="">Model Seçin</option>
+                        <option value="corolla">Corolla Hybrid</option>
+                        <option value="chr">Toyota C-HR</option>
+                        <option value="yaris">Yaris Cross</option>
+                        <option value="rav4">RAV4 Hybrid</option>
+                        <option value="camry">Camry Hybrid</option>
+                    </select>
+                    <input type="date" class="form-input" required>
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-car"></i>
+                        Randevu Al
+                    </button>
+                </form>
+                <div class="success-message" style="display: none;">
+                    <div class="success-icon">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <h3>Randevunuz Oluşturuldu!</h3>
+                    <p>Test sürüşü için onay mesajı e-posta adresinize gönderilecektir.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp FAB -->
+    <a href="https://wa.me/908501234567?text=Merhaba,%20Toyota%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" class="fab-whatsapp">
+        <span class="fab-tooltip">WhatsApp Destek</span>
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>TOYOTA</h3>
+                    <p>İmkansız diye bir şey yok. Geleceğin teknolojisi bugünden sizinle.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Hızlı Linkler</h4>
+                    <ul>
+                        <li><a href="models.html">Modeller</a></li>
+                        <li><a href="configurator.html">Konfigüratör</a></li>
+                        <li><a href="campaigns.html">Kampanyalar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Hizmetler</h4>
+                    <ul>
+                        <li><a href="#" onclick="openModal('serviceModal'); return false;">Servis Randevusu</a></li>
+                        <li><a href="warranty.html">Garanti</a></li>
+                        <li><a href="#">Yol Yardım</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Bizi Takip Edin</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/ToyotaTurkiye" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/toyota_turkiye/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/Toyota_Turkiye" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.youtube.com/user/ToyotaTurkiye" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Toyota Türkiye. Tüm hakları saklıdır. Eğitim projesidir.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
