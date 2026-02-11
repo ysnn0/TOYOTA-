@@ -62,6 +62,7 @@ Veya VS Code kullanıyorsanız "Live Server" eklentisi ile başlatın.
 
 📸 Ekran Görüntüleri
 <img width="1892" height="829" alt="toyota anasayfa" src="https://github.com/user-attachments/assets/91d9d77b-35a1-4c5f-9fc0-1d81e56bb4ad"/>
+
 <img width="1892" height="928" alt="configurator" src="https://github.com/user-attachments/assets/7c3704d6-8c43-45bb-a825-031dc82555cb"/>
 
 📄 Lisans
