@@ -60,9 +60,6 @@ index.html dosyasını favori tarayıcınızda (Chrome, Firefox vb.) açın.
 
 Veya VS Code kullanıyorsanız "Live Server" eklentisi ile başlatın.
 
-📸 Ekran Görüntüleri
-
-
 📄 Lisans
 Bu proje MIT Lisansı altında lisanslanmıştır. Eğitim ve portfolyo amaçlı geliştirilmiştir. Toyota marka hakları ilgili şirkete aittir.
 
