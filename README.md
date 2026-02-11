@@ -62,9 +62,9 @@ Veya VS Code kullanıyorsanız "Live Server" eklentisi ile başlatın.
 
 📸 Ekran Görüntüleri
 
-![Toyota Anasayfa](https://github.com/user-attachments/assets/91d9d77b-35a1-4c5f-9fc0-1d81e56bb4ad)
 
-![Configurator](https://github.com/user-attachments/assets/7c3704d6-8c43-45bb-a825-031dc82555cb)
+<img width="1892" height="829" alt="toyota anasayfa" src="https://github.com/user-attachments/assets/724c5a77-6342-47e1-87a8-ab21dc258fed" />
+
 
 📄 Lisans
 Bu proje MIT Lisansı altında lisanslanmıştır. Eğitim ve portfolyo amaçlı geliştirilmiştir. Toyota marka hakları ilgili şirkete aittir.
