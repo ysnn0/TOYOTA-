@@ -1,4 +1,4 @@
-<img width="1892" height="829" alt="toyota anasayfa" src="https://github.com/user-attachments/assets/91d9d77b-35a1-4c5f-9fc0-1d81e56bb4ad" /># 🚗 Toyota Türkiye - Web Sitesi Projesi
+# 🚗 Toyota Türkiye - Web Sitesi Projesi
 
 Bu proje, modern web teknolojileri (HTML5, CSS3, JavaScript) kullanılarak geliştirilmiş, çok sayfalı ve etkileşimli bir araba bayii/marka web sitesidir. Kullanıcıların araç modellerini inceleyebileceği, özelleştirebileceği ve ödeme planı oluşturabileceği dinamik bir yapıya sahiptir.
 
@@ -61,10 +61,11 @@ index.html dosyasını favori tarayıcınızda (Chrome, Firefox vb.) açın.
 Veya VS Code kullanıyorsanız "Live Server" eklentisi ile başlatın.
 
 📸 Ekran Görüntüleri
-(Buraya projenizden alacağınız ekran görüntülerini ekleyebilirsiniz)
+<img width="1892" height="829" alt="toyota anasayfa" src="https://github.com/user-attachments/assets/91d9d77b-35a1-4c5f-9fc0-1d81e56bb4ad" />
+<img width="1892" height="928" alt="configurator" src="https://github.com/user-attachments/assets/7c3704d6-8c43-45bb-a825-031dc82555cb" />
 
 📄 Lisans
 Bu proje MIT Lisansı altında lisanslanmıştır. Eğitim ve portfolyo amaçlı geliştirilmiştir. Toyota marka hakları ilgili şirkete aittir.
 
 Geliştirici: [Yasin Dağ/ysnn.0]
-<img width="1892" height="829" alt="toyota anasayfa" src="https://github.com/user-attachments/assets/085ea871-47f4-40fd-8222-2fa6719d4e1c" />
+
