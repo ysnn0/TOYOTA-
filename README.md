@@ -61,11 +61,6 @@ index.html dosyasını favori tarayıcınızda (Chrome, Firefox vb.) açın.
 Veya VS Code kullanıyorsanız "Live Server" eklentisi ile başlatın.
 
 📸 Ekran Görüntüleri
-![Uploading configurator.png…]()
-
-
-
-<img width="1892" height="829" alt="toyota anasayfa" src="https://github.com/user-attachments/assets/724c5a77-6342-47e1-87a8-ab21dc258fed"/>
 
 
 📄 Lisans
